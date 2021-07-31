@@ -108,7 +108,7 @@ const App = () => {
 
     provided.announce(message);
 
-    const { destination, source, draggableId, type } = result;
+    const { destination, source, draggableId } = result;
 
     if (!destination) {
       return;
