@@ -35,37 +35,12 @@ const InnerList = (props) => {
 
 const App = () => {
   const [state, setState] = useState({
-    tasks: {
-      "task-1": {
-        id: "task-1",
-        title: "Take out the garbage",
-        description: "Take out the garbage",
-        priority: "low",
-        isVisible: true,
-        isDeleted: false,
-      },
-      "task-2": {
-        id: "task-2",
-        title: "Watch my favorite show",
-        description: "Hello world one",
-        priority: "medium",
-        isVisible: true,
-        isDeleted: false,
-      },
-      "task-3": {
-        id: "task-3",
-        title: "Charge my phone",
-        description: "HELLO WORLD TWO",
-        priority: "high",
-        isVisible: true,
-        isDeleted: false,
-      },
-    },
+    tasks: {},
     columns: {
       "column-1": {
         id: "column-1",
         title: "To do",
-        taskIds: ["task-1", "task-2", "task-3"],
+        taskIds: [],
       },
       "column-2": {
         id: "column-2",
@@ -79,7 +54,7 @@ const App = () => {
       },
     },
     columnOrder: ["column-1", "column-2", "column-3"],
-    tasksCount: 3,
+    tasksCount: 0,
     columnsCount: 3,
   });
   const [search, setSearch] = useState("");
@@ -333,19 +308,19 @@ const App = () => {
 
                         if (
                           priorityFilter.includes("low") &&
-                          selectedPriority !== "lowPriority"
+                          selectedPriority !== "low"
                         ) {
                           newPriorityFitler.push("low");
                         }
                         if (
                           priorityFilter.includes("medium") &&
-                          selectedPriority !== "mediumPriority"
+                          selectedPriority !== "medium"
                         ) {
                           newPriorityFitler.push("medium");
                         }
                         if (
                           priorityFilter.includes("high") &&
-                          selectedPriority !== "highPriority"
+                          selectedPriority !== "high"
                         ) {
                           newPriorityFitler.push("high");
                         }
